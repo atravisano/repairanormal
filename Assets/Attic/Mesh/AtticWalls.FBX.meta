@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: f046247beed7fa349a57133b1a22fdfd
+timeCreated: 1520119781
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box045
+    100004: Box072
+    100006: Box112
+    100008: Box140
+    100010: Box146
+    100012: Box150
+    100014: Box155
+    100016: Box162
+    100018: Box172
+    100020: Group003
+    100022: Object009
+    100024: Plane001
+    100026: _movable
+    100028: gate A
+    100030: gate B
+    100032: window
+    100034: Box169
+    100036: Line001
+    100038: Line003
+    100040: carpet001
+    100042: carpet
+    400000: //RootNode
+    400002: Box045
+    400004: Box072
+    400006: Box112
+    400008: Box140
+    400010: Box146
+    400012: Box150
+    400014: Box155
+    400016: Box162
+    400018: Box172
+    400020: Group003
+    400022: Object009
+    400024: Plane001
+    400026: _movable
+    400028: gate A
+    400030: gate B
+    400032: window
+    400034: Box169
+    400036: Line001
+    400038: Line003
+    400040: carpet001
+    400042: carpet
+    2300000: Box045
+    2300002: Box072
+    2300004: Box112
+    2300006: Box140
+    2300008: Box146
+    2300010: Box150
+    2300012: Box155
+    2300014: Box162
+    2300016: Box172
+    2300018: Object009
+    2300020: Plane001
+    2300022: _movable
+    2300024: gate A
+    2300026: gate B
+    2300028: Box169
+    2300030: Line001
+    2300032: Line003
+    2300034: carpet001
+    2300036: carpet
+    3300000: Box045
+    3300002: Box072
+    3300004: Box112
+    3300006: Box140
+    3300008: Box146
+    3300010: Box150
+    3300012: Box155
+    3300014: Box162
+    3300016: Box172
+    3300018: Object009
+    3300020: Plane001
+    3300022: _movable
+    3300024: gate A
+    3300026: gate B
+    3300028: Box169
+    3300030: Line001
+    3300032: Line003
+    3300034: carpet001
+    3300036: carpet
+    4300000: Box162
+    4300002: Box072
+    4300004: Box045
+    4300006: Box140
+    4300008: Plane001
+    4300010: Box150
+    4300012: Box155
+    4300014: Object009
+    4300016: Box146
+    4300018: Box172
+    4300020: Box112
+    4300022: gate A
+    4300024: gate B
+    4300026: _movable
+    4300028: Line001
+    4300030: Line003
+    4300032: Box169
+    4300034: carpet001
+    4300036: carpet
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
