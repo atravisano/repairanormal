@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WoodA
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 7d1caf19a580cea41a2760b7218c7872, type: 3}
+        m_Texture: {fileID: 2800000, guid: 81699f95fca4141128e49c043ef45fdd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cdd948bd89eb11c43bb026700d0a8b4f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8878631e60c0c48649cbe9e670144c61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 0d7eb1aae5b0ebd4facfa9a61daa62fc, type: 3}
+        m_Texture: {fileID: 2800000, guid: f17427fe1cadd484b8c1b6d1ff0bc702, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
