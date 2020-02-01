@@ -33,10 +33,9 @@ public class AttachCableOnCollide : MonoBehaviour
             joint.connectedBody = col.contacts[0].otherCollider.transform.GetComponentInParent<Rigidbody>();
             // Stops objects from continuing to collide and creating more joints
             joint.enableCollision = false;
-            Debug.Log("Connected!");
         }
     }
-    
+
      void EnableSpark(bool isEnabled)
      {
         this.transform.GetChild(0).gameObject.SetActive(isEnabled);
