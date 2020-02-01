@@ -6,13 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject lightBulb;
     private Light light;
-    public float lifeIntensity = 1;
+    public float lifeIntensity = 6;
 
     // Start is called before the first frame update
     void Start()
     {
         light = lightBulb.GetComponent<Light>();
-        light.intensity = lifeIntensity;
     }
 
     // Update is called once per frame
@@ -20,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         if(lifeIntensity >= 0) {
             lifeIntensity -= .001f;
-            light.intensity = lifeIntensity;
+            light.range = lifeIntensity;
         }
     }
 }
