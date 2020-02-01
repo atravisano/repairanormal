@@ -11,8 +11,7 @@ public class toggleButton : MonoBehaviour
     void Start()
     {
 
-        thisButton = button.GetComponent<GameObject>();
-        
+       //
     }
 
     // Update is called once per frame

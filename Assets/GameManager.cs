@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private Light light;
 
     // Player
-    public float lifeIntensity = 1;
+    public float lifeIntensity = 0;
 
     // Button Panel
     private bool[] buttonState = new bool[6];
@@ -28,16 +28,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        light.intensity = lifeIntensity;
+        lifeIntensity = light.range;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if(lifeIntensity >= 0 && !getPanelButtonState()) {
+        if(lifeIntensity >= 0) {
             lifeIntensity -= .001f;
-            light.intensity = lifeIntensity;
+            light.range = lifeIntensity;
         }
     }
 
