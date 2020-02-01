@@ -18,17 +18,20 @@ public class SparkNotOnCollision : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
+        Debug.Log("Enter" + col.gameObject.name);
         if (col.gameObject.name == GameObjectName.name)
         {
             // disable spark
             EnableSpark(false);
+            col.gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
     }
 
-    void OnCollisionExit(Collision other) 
+    void OnTriggerExit(Collider other) 
     {
+        Debug.Log("Exit" + other.gameObject.name);
         EnableSpark(true);
     }
 
