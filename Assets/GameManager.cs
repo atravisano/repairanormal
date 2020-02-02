@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
     }
 
     private bool isPanelInSuccessState(){
+        return true;
         if(
             buttonState[0] == true &&
             buttonState[1] == true &&
