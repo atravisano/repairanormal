@@ -61,6 +61,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            ResetGame();
+        }
+
         if(lifeIntensity >= 0) {
             if (!FuseInstalled || !isPanelInSuccessState())
             {
@@ -111,7 +115,6 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         GameOverSlate.SetActive(false);
-        Debug.Log("Restarting");
         lifeIntensity = originalLifeIntensity;
     }
 
