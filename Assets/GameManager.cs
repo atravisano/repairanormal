@@ -24,6 +24,15 @@ public class GameManager : MonoBehaviour
     private bool[] buttonState = new bool[6];
     public GameObject buttonPanel;
 
+    //Light Flicker
+    public float lightFlickerDuration = 2;
+    private bool isFlickering = false;
+    Queue<float> smoothQueue;
+    float lastSum = 0;
+    private float minIntensity = 0f;
+    private float maxIntensity = 1f;
+    public int lightFlickerSmoothing = 5;
+
     private bool wasPreviouslyPowered = false;
     private float originalLifeIntensity;
 
@@ -46,6 +55,7 @@ public class GameManager : MonoBehaviour
         lifeIntensity = light.range;
         audioSource.loop = true;
         audioSource.clip = DrainingSound;
+       // maxIntensity = light.intensity;
         audioSource.Play();
     }
 
@@ -60,6 +70,7 @@ public class GameManager : MonoBehaviour
                 light.range = lifeIntensity;
                 
                 if (wasPreviouslyPowered) {
+                    StartCoroutine( Flicker() );
                     audioSource.Stop();
                     audioSource.loop = true;
                     audioSource.clip = DrainingSound;
@@ -91,7 +102,7 @@ public class GameManager : MonoBehaviour
         ResetGame();
     }
 
-    public void panelButtonPressed0(){ Debug.Log("pressed"); buttonState[0] = !buttonState[0]; buttonState[1] = !buttonState[1]; }
+    public void panelButtonPressed0(){ buttonState[0] = !buttonState[0]; buttonState[1] = !buttonState[1]; }
     public void panelButtonPressed1(){ buttonState[1] = !buttonState[1]; buttonState[0] = !buttonState[0]; }
     public void panelButtonPressed2(){ buttonState[2] = !buttonState[2]; buttonState[3] = !buttonState[3]; }
     public void panelButtonPressed3(){ buttonState[3] = !buttonState[3]; buttonState[2] = !buttonState[2]; }
@@ -109,10 +120,10 @@ public class GameManager : MonoBehaviour
         return true;
         if(
             buttonState[0] == true &&
-            buttonState[1] == true &&
+            buttonState[1] == false &&
             buttonState[2] == true &&
             buttonState[3] == false &&
-            buttonState[4] == false &&
+            buttonState[4] == true &&
             buttonState[5] == false
         ){
             return true;
@@ -134,6 +145,39 @@ public class GameManager : MonoBehaviour
     public bool getButtonState(int index){
 
         return buttonState[index];
+
+    }
+
+
+    IEnumerator Flicker(){
+
+        float time = 0.0f;
+        isFlickering = true;
+
+        while ( time < lightFlickerDuration ) {
+
+            time += Time.deltaTime;
+               
+            // pop off an item if too big
+            while (smoothQueue.Count >= lightFlickerSmoothing) {
+                lastSum -= smoothQueue.Dequeue();
+            }
+
+            // Generate random new item, calculate new average
+            float newVal = Random.Range(minIntensity, maxIntensity);
+            smoothQueue.Enqueue(newVal);
+            lastSum += newVal;
+
+            // Calculate new smoothed average
+            light.intensity = lastSum / (float)smoothQueue.Count;
+
+            yield return null;
+
+        }
+
+        lastSum = maxIntensity;
+        light.intensity = maxIntensity;
+        isFlickering = false;
 
     }
 
