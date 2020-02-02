@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     IEnumerator GameOverSequence()
     {
         GameOverSlate.SetActive(true);
-        yield return new WaitForSeconds(5); 
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         ResetGame();
     }
 
