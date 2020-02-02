@@ -5,7 +5,7 @@ using UnityEngine;
 public class Scaling : MonoBehaviour
 {
     public GameObject lightbulb;
-    public Light light;
+    private Light light;
     public float initialYScale;
     public float initialRange;
 
