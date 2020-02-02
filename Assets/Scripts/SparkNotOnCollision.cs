@@ -5,11 +5,13 @@ using UnityEngine;
 public class SparkNotOnCollision : MonoBehaviour
 {
     public GameObject GameObjectName;
+    public GameObject GameManagerReference;
+    private GameManager _gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _gameManager = GameManagerReference.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -20,19 +22,20 @@ public class SparkNotOnCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Enter" + col.gameObject.name);
         if (col.gameObject.name == GameObjectName.name)
         {
             // disable spark
             EnableSpark(false);
             col.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            _gameManager.FuseInstalled = true;
         }
     }
 
     void OnTriggerExit(Collider other) 
     {
-        Debug.Log("Exit" + other.gameObject.name);
         EnableSpark(true);
+        _gameManager.FuseInstalled = false;
+        other.gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 
      void EnableSpark(bool isEnabled)

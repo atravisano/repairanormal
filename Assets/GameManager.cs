@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-
+    public bool FuseInstalled;
+    
     // THE Light
     public GameObject lightBulb;
     private Light light;
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lifeIntensity >= 0) {
+        if(lifeIntensity >= 0 && !FuseInstalled) {
             lifeIntensity -= .001f;
             light.range = lifeIntensity;
         }
