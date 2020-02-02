@@ -12,20 +12,13 @@ public class PlayRandomSound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeBeforeDestroy = deleteGameObjectAfterTime;
         PlayRandomAudioClip();
+        Destroy(this.gameObject, deleteGameObjectAfterTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeBeforeDestroy -= Time.deltaTime;
-        if(timeBeforeDestroy <= 0)
-        {
-            // Destroy game object after specified time
-            Destroy(this.gameObject);
-            timeBeforeDestroy = deleteGameObjectAfterTime;
-        }
     }
 
     void PlayRandomAudioClip()

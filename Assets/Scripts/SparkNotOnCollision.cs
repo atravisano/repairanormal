@@ -39,7 +39,7 @@ public class SparkNotOnCollision : MonoBehaviour
         if (timeUntilSpawn <= 0)
         {
             // disable gravity
-            EnableColliderGravity(other, false);
+            EnableColliderGravity(other, true);
             timeUntilSpawn = Delay;
         }
     }
@@ -58,6 +58,7 @@ public class SparkNotOnCollision : MonoBehaviour
 
      void EnableColliderGravity(Collider other, bool isEnabled)
      {
+         Debug.Log("Gravity: " + isEnabled);
          other.gameObject.GetComponent<Rigidbody>().useGravity = isEnabled;
      }
 }
