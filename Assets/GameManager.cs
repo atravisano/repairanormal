@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     // Fuse
     public bool FuseInstalled;
     public AudioSource audioSource;
-    public AudioClip audioClip;
+    public AudioClip PoweredSound;
+    public AudioClip DrainingSound;
     
     // THE Light
     public GameObject lightBulb;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     private bool[] buttonState = new bool[6];
     public GameObject buttonPanel;
 
+    private bool wasPreviouslyPowered = false;
 
 
     void Awake()
@@ -29,24 +31,42 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
     void Start()
     {
         lifeIntensity = light.range;
+        audioSource.loop = true;
+        audioSource.clip = DrainingSound;
+        audioSource.Play();
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         if(lifeIntensity >= 0) {
-            if (!FuseInstalled) {
-            lifeIntensity -= .001f;
-            light.range = lifeIntensity;
-            } else {
-                // play power up noise
-                audioSource.clip = audioClip;
-                audioSource.Play();
+            if (!FuseInstalled)
+            {
+                // Draining power
+                lifeIntensity -= .001f;
+                light.range = lifeIntensity;
+                
+                if (wasPreviouslyPowered) {
+                    audioSource.Stop();
+                    audioSource.loop = true;
+                    audioSource.clip = DrainingSound;
+                    audioSource.Play();
+                }
+                wasPreviouslyPowered = false;
+            }
+            else
+            {
+                // Everything is powered
+                if (!wasPreviouslyPowered) {
+                    audioSource.Stop();
+                    audioSource.loop = false;
+                    audioSource.clip = PoweredSound;
+                    audioSource.Play();
+                }
+                wasPreviouslyPowered = true;
             }
         }
     }
