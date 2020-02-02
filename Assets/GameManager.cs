@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    // Fuse
     public bool FuseInstalled;
     public AudioSource audioSource;
     public AudioClip PoweredSound;
@@ -29,8 +27,8 @@ public class GameManager : MonoBehaviour
     private bool isFlickering = false;
     Queue<float> smoothQueue;
     float lastSum = 0;
-    private float minIntensity = 0f;
-    private float maxIntensity = 1f;
+    private float minIntensity = 0.2f;
+    private float maxIntensity = 0.5f;
     public int lightFlickerSmoothing = 5;
 
     private bool wasPreviouslyPowered = false;
@@ -57,6 +55,7 @@ public class GameManager : MonoBehaviour
         audioSource.clip = DrainingSound;
        // maxIntensity = light.intensity;
         audioSource.Play();
+        smoothQueue = new Queue<float>(lightFlickerSmoothing);
     }
 
 
@@ -117,7 +116,6 @@ public class GameManager : MonoBehaviour
     }
 
     private bool isPanelInSuccessState(){
-        return true;
         if(
             buttonState[0] == true &&
             buttonState[1] == false &&
@@ -150,7 +148,6 @@ public class GameManager : MonoBehaviour
 
 
     IEnumerator Flicker(){
-
         float time = 0.0f;
         isFlickering = true;
 
