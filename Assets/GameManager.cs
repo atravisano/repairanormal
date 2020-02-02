@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip PoweredSound;
     public AudioClip DrainingSound;
+
+    public GameObject GameOverSlate;
     
     // THE Light
     public GameObject lightBulb;
@@ -70,8 +72,17 @@ public class GameManager : MonoBehaviour
                 wasPreviouslyPowered = true;
             }
         }
+        else {
+            StartCoroutine(GameOverSequence());
+        }
     }
 
+    IEnumerator GameOverSequence()
+    {
+        GameOverSlate.SetActive(true);
+        yield return new WaitForSeconds(5); 
+        ResetGame();
+    }
 
     public void panelButtonPressed0(){ buttonState[0] = !buttonState[0]; buttonState[3] = !buttonState[3]; }
     public void panelButtonPressed1(){ buttonState[1] = !buttonState[1]; buttonState[4] = !buttonState[4]; }
@@ -82,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
+        GameOverSlate.SetActive(false);
         Debug.Log("Restarting");
         lifeIntensity = originalLifeIntensity;
     }
