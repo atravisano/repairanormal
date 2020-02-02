@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     {
         light = lightBulb.GetComponent<Light>();
 
-        buttonState[0] = true;
-        buttonState[1] = false;
+        buttonState[0] = false;
+        buttonState[1] = true;
         buttonState[2] = true;
         buttonState[3] = false;
         buttonState[4] = true;
