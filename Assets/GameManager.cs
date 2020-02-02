@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject buttonPanel;
 
     private bool wasPreviouslyPowered = false;
-
+    private float originalLifeIntensity;
 
     void Awake()
     {
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        originalLifeIntensity = light.range;
         lifeIntensity = light.range;
         audioSource.loop = true;
         audioSource.clip = DrainingSound;
@@ -78,6 +79,12 @@ public class GameManager : MonoBehaviour
     public void panelButtonPressed3(){ buttonState[3] = !buttonState[3]; buttonState[0] = !buttonState[0]; }
     public void panelButtonPressed4(){ buttonState[4] = !buttonState[4]; buttonState[1] = !buttonState[1]; }
     public void panelButtonPressed5(){ buttonState[5] = !buttonState[5]; buttonState[5] = !buttonState[5]; }
+
+    public void ResetGame()
+    {
+        Debug.Log("Restarting");
+        lifeIntensity = originalLifeIntensity;
+    }
 
     private bool getPanelButtonState(){
         if(
