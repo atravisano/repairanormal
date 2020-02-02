@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    // Fuse
     public bool FuseInstalled;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
     
     // THE Light
     public GameObject lightBulb;
@@ -36,9 +39,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lifeIntensity >= 0 && !FuseInstalled) {
+        if(lifeIntensity >= 0) {
+            if (!FuseInstalled) {
             lifeIntensity -= .001f;
             light.range = lifeIntensity;
+            } else {
+                // play power up noise
+                audioSource.clip = audioClip;
+                audioSource.Play();
+            }
         }
     }
 
