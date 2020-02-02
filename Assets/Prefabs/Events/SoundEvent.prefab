@@ -47,9 +47,19 @@ MonoBehaviour:
   audioSource: {fileID: 7733944534121018934}
   audioClips:
   - {fileID: 8300000, guid: b33401f57f2865841a4d0d7d201acb8a, type: 3}
+  - {fileID: 8300000, guid: 08b4ba6cd22a9ab4986a13fff034f354, type: 3}
   - {fileID: 8300000, guid: 45287ae85ebf6bd40899fec867d6c349, type: 3}
-  - {fileID: 8300000, guid: 67d2c57522e05a042866b585c42cde6a, type: 3}
   - {fileID: 8300000, guid: e2b822fc6eddc83448ec86f2795a7519, type: 3}
+  - {fileID: 8300000, guid: 998cf7c9b93181a4eae0373b6195a5a6, type: 3}
+  - {fileID: 8300000, guid: 4cbe71208284b634083b72cf87ed44fa, type: 3}
+  - {fileID: 8300000, guid: d408b84c53fdd134a9d937e1701756f8, type: 3}
+  - {fileID: 8300000, guid: 9a9a1846773e43544994b690fe21e4fe, type: 3}
+  - {fileID: 8300000, guid: f772eabdba2ce7f4d8900224d22b67eb, type: 3}
+  - {fileID: 8300000, guid: 2ff7baa8e5edcba47b97bbc6cc2b11f8, type: 3}
+  - {fileID: 8300000, guid: 56acb4f0a5b596442bfb479246925567, type: 3}
+  - {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
+  - {fileID: 8300000, guid: 57f5f9fc49e59cb4ca4ae0d069d09f33, type: 3}
+  - {fileID: 8300000, guid: 727c90cef4c97c545a8860dda29b53b1, type: 3}
   deleteGameObjectAfterTime: 10
 --- !u!82 &7733944534121018934
 AudioSource:
