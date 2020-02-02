@@ -47,8 +47,8 @@ MonoBehaviour:
   audioSource: {fileID: 7733944534121018934}
   audioClips:
   - {fileID: 8300000, guid: b33401f57f2865841a4d0d7d201acb8a, type: 3}
-  - {fileID: 8300000, guid: 187cce41a2414d340bae11baf919fdb2, type: 3}
-  - {fileID: 8300000, guid: 6a899ad70939eba4b9e9027ad52c64b0, type: 3}
+  - {fileID: 8300000, guid: 45287ae85ebf6bd40899fec867d6c349, type: 3}
+  - {fileID: 8300000, guid: 67d2c57522e05a042866b585c42cde6a, type: 3}
   - {fileID: 8300000, guid: e2b822fc6eddc83448ec86f2795a7519, type: 3}
   deleteGameObjectAfterTime: 10
 --- !u!82 &7733944534121018934

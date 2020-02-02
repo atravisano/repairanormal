@@ -18,6 +18,7 @@ public class SparkNotOnCollision : MonoBehaviour
         _gameManager = GameManagerReference.GetComponent<GameManager>();
         // sparks are on by default. Play sound continuously.
         PlayAudioClip(SparkAudioClip, true);
+        timeUntilSpawn = Delay;
     }
 
     // Update is called once per frame
