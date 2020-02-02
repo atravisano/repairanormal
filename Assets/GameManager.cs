@@ -49,13 +49,6 @@ public class GameManager : MonoBehaviour
     public void panelButtonPressed4(){ buttonState[4] = !buttonState[4]; buttonState[1] = !buttonState[1]; }
     public void panelButtonPressed5(){ buttonState[5] = !buttonState[5]; buttonState[5] = !buttonState[5]; }
 
-    /*public void getButtonState0(){ return buttonState[0]; }
-    public void getButtonState1(){ return buttonState[1]; }
-    public void getButtonState2(){ return buttonState[2]; }
-    public void getButtonState3(){ return buttonState[3]; }
-    public void getButtonState4(){ return buttonState[4]; }
-    public void getButtonState5(){ return buttonState[5]; }*/
-
     private bool getPanelButtonState(){
         if(
             buttonState[0] == true &&
@@ -71,6 +64,12 @@ public class GameManager : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void breakPanelButtons(int something){
+
+        Debug.Log(something);
+
     }
 
 }
