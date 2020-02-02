@@ -21,7 +21,10 @@ public class Spawner : MonoBehaviour
         timeUntilSpawn -= Time.deltaTime;
         if (timeUntilSpawn <= 0)
         {
-            Instantiate(SpawnPrefabs[Random.Range(0, SpawnPrefabs.Length)], new Vector3(RandomLowerBound, 0, RandomUpperBound), transform.rotation);
+            Instantiate(
+                SpawnPrefabs[Random.Range(0, SpawnPrefabs.Length)],
+                new Vector3(Random.Range(RandomLowerBound, RandomUpperBound), 0, Random.Range(RandomLowerBound, RandomUpperBound)),
+                transform.rotation);
             timeUntilSpawn = Delay;
         }
     }
