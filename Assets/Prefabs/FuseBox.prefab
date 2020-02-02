@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameObjectName: {fileID: 0}
   GameManagerReference: {fileID: 0}
+  Delay: 3
 --- !u!1 &243456805803338387
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +152,8 @@ GameObject:
   - component: {fileID: 3197330590376120337}
   - component: {fileID: 6576973092392193353}
   - component: {fileID: 3514474791141960034}
+  - component: {fileID: 1835639795}
+  - component: {fileID: 1835639798}
   m_Layer: 0
   m_Name: Pilar
   m_TagString: Untagged
@@ -217,6 +220,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1835639795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288620111533509229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49281353, y: 1.0000005, z: 1.0000001}
+  m_Center: {x: -0.2535934, y: 0.0000014530224, z: -0.000015477137}
+--- !u!65 &1835639798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288620111533509229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5178142, y: 1.0000005, z: 0.87779695}
+  m_Center: {x: 0.24109265, y: 0.0000009671209, z: 0.06108619}
 --- !u!1 &1698714032945102805
 GameObject:
   m_ObjectHideFlags: 0
