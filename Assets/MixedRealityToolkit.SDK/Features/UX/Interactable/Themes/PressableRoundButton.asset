@@ -126,7 +126,7 @@ MonoBehaviour:
       ShaderName: 
     customProperties: []
     easing:
-      Enabled: 0
+      Enabled: 1
       Curve:
         serializedVersion: 2
         m_Curve:
@@ -152,4 +152,4 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       LerpTime: 0.2
-  states: {fileID: 11400000, guid: 5eac1712038236e4b8ffdb3893804fe1, type: 2}
+  states: {fileID: 11400000, guid: e51893c8eb7938e4ba43985af43c0f72, type: 2}

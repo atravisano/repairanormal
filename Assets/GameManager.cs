@@ -23,6 +23,13 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         light = lightBulb.GetComponent<Light>();
+
+        buttonState[0] = true;
+        buttonState[1] = false;
+        buttonState[2] = true;
+        buttonState[3] = false;
+        buttonState[4] = true;
+        buttonState[5] = false;
     }
 
 
@@ -43,14 +50,14 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void panelButtonPressed0(){ buttonState[0] = !buttonState[0]; buttonState[3] = !buttonState[3]; }
-    public void panelButtonPressed1(){ buttonState[1] = !buttonState[1]; buttonState[4] = !buttonState[4]; }
-    public void panelButtonPressed2(){ buttonState[2] = !buttonState[2]; buttonState[5] = !buttonState[5]; }
-    public void panelButtonPressed3(){ buttonState[3] = !buttonState[3]; buttonState[0] = !buttonState[0]; }
-    public void panelButtonPressed4(){ buttonState[4] = !buttonState[4]; buttonState[1] = !buttonState[1]; }
-    public void panelButtonPressed5(){ buttonState[5] = !buttonState[5]; buttonState[5] = !buttonState[5]; }
+    public void panelButtonPressed0(){ Debug.Log("pressed"); buttonState[0] = !buttonState[0]; buttonState[1] = !buttonState[1]; }
+    public void panelButtonPressed1(){ buttonState[1] = !buttonState[1]; buttonState[0] = !buttonState[0]; }
+    public void panelButtonPressed2(){ buttonState[2] = !buttonState[2]; buttonState[3] = !buttonState[3]; }
+    public void panelButtonPressed3(){ buttonState[3] = !buttonState[3]; buttonState[2] = !buttonState[2]; }
+    public void panelButtonPressed4(){ buttonState[4] = !buttonState[4]; buttonState[5] = !buttonState[5]; }
+    public void panelButtonPressed5(){ buttonState[5] = !buttonState[5]; buttonState[4] = !buttonState[4]; }
 
-    private bool getPanelButtonState(){
+    private bool isPanelInSuccessState(){
         if(
             buttonState[0] == true &&
             buttonState[1] == true &&
@@ -67,9 +74,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void breakPanelButtons(int something){
+    public void breakPanelButtons(int index){
 
-        Debug.Log(something);
+        if(index == 0 && buttonState[0] == true){ panelButtonPressed0(); }
+        if(index == 1 && buttonState[2] == true){ panelButtonPressed2(); }
+        if(index == 2 && buttonState[4] == true){ panelButtonPressed4(); }
+
+    }
+
+    public bool getButtonState(int index){
+
+        return buttonState[index];
 
     }
 
