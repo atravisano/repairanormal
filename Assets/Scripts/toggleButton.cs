@@ -13,9 +13,9 @@ public class toggleButton : MonoBehaviour
     public int index = 0;
     
 
-    private int PERCENT_CHANCE_OF_BREAK = 42;
+    private int PERCENT_CHANCE_OF_BREAK = 33;
     private float BREAK_START_DELAY = 5.0f;
-    private float BREAK_ROLL_INTERVAL = 7.0f;
+    private float BREAK_ROLL_INTERVAL = 14.0f;
 
 
     // Start is called before the first frame update
