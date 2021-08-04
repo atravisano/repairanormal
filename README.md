@@ -9,6 +9,7 @@ MS Windows, Virtual Reality platform
 ## Tools And Technologies
 .Net, Unity (any product), Virtual reality head mount display (Oculus Rift, HTC Vive, etc.)
 
-For more details:
+## For more details:
 Global Game Jam Team Page: https://globalgamejam.org/2020/games/repair-anormal-1
+
 Original repo: <https://github.com/swhook52/repairanormal>
